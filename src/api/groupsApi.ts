@@ -10,4 +10,5 @@ export const getGroupsApi = async (): Promise<GroupInterface[]> => {
     console.log('>>> getGroupsApi', err);
     return [] as GroupInterface[];
   }
+  
 };
