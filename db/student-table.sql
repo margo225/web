@@ -1,4 +1,3 @@
-
 DROP TABLE student;
 CREATE TABLE student(  
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -8,3 +7,7 @@ CREATE TABLE student(
     groupId INTEGER,
     FOREIGN KEY (groupId) REFERENCES class(id)
 );
+
+ALTER TABLE student ADD uuid [text];
+
+DELETE FROM student;
