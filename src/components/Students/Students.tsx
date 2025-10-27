@@ -16,12 +16,19 @@ const Students = (): React.ReactElement => {
 
   const onDeleteHandler = (studentId: number): void => {
     if (confirm('Удалить студента?')) {
+      console.log('onDeleteHander',studentId);
+      debugger;
       deleteStudentMutate(studentId);
     }
   };
 
+  /**
+   * Добавлениестудента-обработчик события нажатия "добавить"
+   * @param studentFormField форма студента
+   */
   const onAddHandler = (studentFormField: FormFields): void => {
     const nextid = students.length>0 ? Math.max(...students.map(s=> s.id))+1 : 1
+    debugger;
     console.log('Добавление студента', studentFormField);
 
     addStudentMutate({
