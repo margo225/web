@@ -11,6 +11,7 @@ const Students = (): React.ReactElement => {
   const {
     students,
     deleteStudentMutate,
+    //openStudentMutate,
     addStudentMutate,
   } = useStudents();
 
@@ -19,6 +20,13 @@ const Students = (): React.ReactElement => {
       console.log('onDeleteHander',studentId);
       debugger;
       deleteStudentMutate(studentId);
+    }
+  };
+  const OnOpenHandler = (studentId: number): void => {
+    if (confirm('Открыть студента?')) {
+      console.log('onOpenHander', studentId);
+      window.location.href = `/students/${studentId}`;
+      //openStudentMutate(studentId);
     }
   };
 
@@ -49,6 +57,7 @@ const Students = (): React.ReactElement => {
           key={student.id || student.uuid}
           student={student}
           onDelete={onDeleteHandler}
+          onOpen={OnOpenHandler}
         />
       ))}
     </div>
