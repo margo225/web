@@ -6,18 +6,17 @@ import styles from './Students.module.scss';
 import Student from './Student/Student';
 import AddStudent, { type FormFields } from './AddStudent/AddStudent';
 import { v4 as uuidv4 } from 'uuid';
+import Link from 'next/link';
+import { constants } from 'buffer';
 
-interface Props {
-  student: StudentInterface;
-}
-const OneStudent = ({ student }: Props): React.ReactElement => {
+const text = '<< Список студентов';
+const NavigationStudent = (): React.ReactElement => {
   
-
   return (
-    <div className={`${styles.Student}`}>
-      {`${student.id || 'xxxx'} - ${student.lastName} ${student.firstName} ${student.middleName}`}
-    </div>
+    <div>
+        <Link href="/students">{text}</Link>
+      </div>
   );
 };
 
-export default OneStudent;
+export default NavigationStudent;

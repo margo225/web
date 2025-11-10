@@ -3,6 +3,7 @@ import React from 'react';
 import { useParams } from 'next/navigation';
 import useStudents from '@/hooks/useStudents';
 import Page from '@/components/layout/Page/Page';
+import NavigationStudent from '@/components/Students/Student'
 //import BackLink from '@/components/Common/BackLink';
 
 const StudentPage = () => {
@@ -18,7 +19,7 @@ const StudentPage = () => {
 
   return (
     <Page>
-
+      <NavigationStudent/>
       <h1 className="text-2xl font-bold mt-4">
         {student.firstName} {student.lastName}
       </h1>
