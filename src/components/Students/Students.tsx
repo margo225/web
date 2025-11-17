@@ -11,7 +11,6 @@ const Students = (): React.ReactElement => {
   const {
     students,
     deleteStudentMutate,
-    //openStudentMutate,
     addStudentMutate,
   } = useStudents();
 
@@ -26,7 +25,6 @@ const Students = (): React.ReactElement => {
     if (confirm('Открыть студента?')) {
       console.log('onOpenHander', studentId);
       window.location.href = `/students/${studentId}`;
-      //openStudentMutate(studentId);
     }
   };
 
@@ -42,7 +40,7 @@ const Students = (): React.ReactElement => {
     addStudentMutate({
       id: nextid,
       ...studentFormField,
-      groupId: 1,
+      //groupId: 1,
       uuid: uuidv4(),
       contacts: ''
     });

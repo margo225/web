@@ -26,6 +26,7 @@ const StudentPage = () => {
 
       <p><strong>Отчество:</strong> {student.middleName}</p>
       <p><strong>Контакты:</strong> {student.contacts}</p>
+      <p><strong>Группа:</strong> {student.group?.name }</p>
     </Page>
   );
 };
