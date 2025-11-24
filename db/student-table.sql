@@ -5,6 +5,7 @@ CREATE TABLE student(
     lastName TEXT,
     middleName TEXT,
     groupId INTEGER,
+    contacts Text,
     FOREIGN KEY (groupId) REFERENCES class(id)
 );
 
